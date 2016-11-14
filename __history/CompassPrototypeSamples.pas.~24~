@@ -1,0 +1,171 @@
+unit CompassPrototypeSamples;
+
+interface
+
+const
+
+xml_hello =
+          '<?xml version="1.0"?>'+#13+
+          '<methodCall>'+#13+
+          '<methodName>liss.hello</methodName>'+#13+        //  liss.getRooms    liss.hello
+          '</methodCall>';
+
+xml_GetRooms =  '<?xml version="1.0"?>'+#13+
+              '<methodCall>'+#13+
+                '<methodName>liss.getRooms</methodName>'+ #13+             // liss.getRooms
+                '<params>'+#13+
+                 '<param>'+#13+
+                  '<value>'+#13+
+                    '<struct>'+#13+
+                     '<member><name>School</name><value>TimeChart</value></member>'+#13+
+                     '<member><name>UserName</name><value>TTUSER1</value></member>'+#13+
+                     '<member><name>Password</name><value>26c5d2f9-aac0-43d8-959b-7a4c14d8b223</value></member>'+#13+
+                     '<member><name>LissVersion</name><value><i4>10002</i4></value></member>'+#13+
+                     '<member><name>UserAgent</name><value>Timetable Software v1</value></member>'+#13+
+                     '<member><name>cyclicalPath</name><value>C:\MyFile.timetableFile</value></member>'+#13+
+                     '</struct>'+#13+
+                  '</value>'+#13+
+                 '</param>'+#13+
+                '</params>'+#13+
+              '</methodCall>';
+
+xml_PublishRooms =
+              '<?xml version="1.0"?>'+#13+
+              '<methodCall>'+ #13+
+              '  <methodName>liss.publishRooms</methodName>'+#13+
+              '  <params>'+#13+
+              '   <param>'+#13+
+              '    <value>'+#13+
+              #13+
+              '<struct>'+#13+
+              '   <member><name>School</name><value>TimeChart</value></member>'+#13+
+              '   <member><name>UserName</name><value>TTUSER1</value></member>'+#13+
+              '   <member><name>Password</name><value>26c5d2f9-aac0-43d8-959b-7a4c14d8b223</value></member>'+#13+
+              '   <member><name>LissVersion</name><value><i4>10002</i4></value></member>'+#13+
+              '   <member><name>UserAgent</name><value>Timetable Software v1</value></member>'+#13+
+              '   <member><name>cyclicalPath</name><value>C:\MyFile.timetableFile</value></member>'+#13+
+              '</struct>'+#13+
+              #13+
+              '    </value>'+#13+
+              '   </param>'+#13+
+              '   <param>'+#13+
+              '      <value>'+#13+
+              '        [TIMESTAMP]'+#13+     //<dateTime.iso8601>20160715T23:59:00</dateTime.iso8601>'+#13+
+              '      </value> '+#13+
+              '   </param>'+#13+
+              '   <param>'+#13+
+              '      <value>'+#13+
+              #13+
+              '       <array>'+#13+
+              #13+
+              '       <data>'+#13+
+              '        <struct>'+#13+
+              '           <member><name>RoomId</name><value><string>46217</string></value></member>'+#13+
+              '           <member><name>RoomCode</name><value><string>RCD</string></value></member>'+#13+
+              '           <member><name>Name</name><value><string>RoomName</string></value></member>'+#13+
+              '           <member><name>Capacity</name><value><i4>20</i4></value></member>'+#13+
+              '           <member><name>Campus</name><value><string>Cremmorne</string></value></member>'+#13+
+              '         </struct>'+#13+
+              '       </data>'+#13+
+              #13+
+              '       <data>'+#13+
+              '        <struct>'+#13+
+              '           <member><name>RoomId</name><value><string>46218</string></value></member>'+#13+
+              '           <member><name>RoomCode</name><value><string>RCD8</string></value></member>'+#13+
+              '           <member><name>Name</name><value><string>RoomName8</string></value></member>'+#13+
+              '           <member><name>Capacity</name><value><i4>20</i4></value></member>'+#13+
+              '           <member><name>Campus</name><value><string>Cremmorne</string></value></member>'+#13+
+              '         </struct>'+#13+
+              '       </data>'+#13+
+              #13+
+              '       </array>'+#13+
+              #13+
+              '      </value>'+#13+
+              '   </param>'+#13+
+              '  </params>'+#13+
+              '</methodCall>';
+
+xml_getStudents =
+          '<?xml version="1.0"?>'+#13+
+          '<methodCall>'+#13+
+          '<methodName>liss.getStudents</methodName>'+#13+        //  liss.getRooms    liss.hello
+          '<params>'+#13+
+             '<param>'+#13+
+              '<value>'+#13+
+                '<struct>'+#13+
+                 '<member><name>School</name><value>TimeChart</value></member>'+#13+
+                 '<member><name>UserName</name><value>TTUSER1</value></member>'+#13+
+                 '<member><name>Password</name><value>26c5d2f9-aac0-43d8-959b-7a4c14d8b223</value></member>'+#13+
+                 '<member><name>LissVersion</name><value><i4>10002</i4></value></member>'+#13+
+                 '<member><name>UserAgent</name><value>Timetable Software v1</value></member>'+#13+
+                 '<member><name>cyclicalPath</name><value>C:\MyFile.timetableFile</value></member>'+#13+
+                 '</struct>'+#13+
+              '</value>'+#13+
+             '</param>'+#13+
+             '<param>'+#13+
+             '  <value>'+#13+
+             '     [TIMESTAMP]'+#13+     //<dateTime.iso8601>20160714T23:59:00</dateTime.iso8601>'+#13+
+             '  </value> '+#13+
+             '</param>'+#13+
+          '</params>'+#13+
+          '</methodCall>';
+
+//liss.publishStudents(auth : AuthorisationObject, asAtDate : timestamp, students : array of student objects)
+
+xmlpublishStudents =
+              '<?xml version="1.0"?>'+#13+
+              '<methodCall>'+ #13+
+              '  <methodName>liss.publishStudents</methodName>'+#13+
+              '  <params>'+#13+
+              #13+
+              '<param>'+#13+
+              ' <value>'+#13+
+              '   <struct>'+#13+
+              '     <member><name>School</name><value>TimeChart</value></member>'+#13+
+              '     <member><name>UserName</name><value>TTUSER1</value></member>'+#13+
+              '     <member><name>Password</name><value>26c5d2f9-aac0-43d8-959b-7a4c14d8b223</value></member>'+#13+
+              '     <member><name>LissVersion</name><value><i4>10002</i4></value></member>'+#13+
+              '     <member><name>UserAgent</name><value>Timetable Software v1</value></member>'+#13+
+              '     <member><name>cyclicalPath</name><value>C:\MyFile.timetableFile</value></member>'+#13+
+              '   </struct>'+#13+
+              ' </value>'+#13+
+              '</param>'+#13+
+              #13+
+              '<param>'+#13+
+              ' <value>'+#13+
+              '   [TIMESTAMP]'+#13+     //<dateTime.iso8601>20160715T23:59:00</dateTime.iso8601>'+#13+
+              ' </value> '+#13+
+              '</param>'+#13+
+              #13+
+              '<param>'+#13+
+              ' <value>'+#13+
+              '   <array>'+#13+
+              '     <data>'+#13+
+              '        <struct>'+#13+
+              (*
+              '           <member><name>StudentId</name><value><string>28722004</string></value></member>'+#13+
+              '           <member><name>FirstName</name><value><string>James</string></value></member>'+#13+
+              '           <member><name>Surname</name><value><string>Clark</string></value></member>'+#13+
+              '           <member><name>PreferredName</name><string>Jim</string></value></member>'+#13+
+              '           <member><name>Form</name><value><string>7</string></value></member>'+#13+
+              '           <member><name>RollGroup</name><value><string>7A</string></value></member>'+#13+
+              '           <member><name>House</name><value><string>Slitherin</string></value></member>'+#13+
+              '           <member><name>Gender</name><value><string>M</string></value></member>'+#13+
+              '           <member><name>StatewideId</name><value><string>7219330187</string></value></member>'+#13+
+              '           <member><name>Email</name><value><string>jimmy.smith@education.gov.nsw.au</string></value></member>'+#13+
+              '           <member><name>Phone</name><value><string>0418 123456</string></value></member>'+#13+
+              '           <member><name>Guid</name><value><string>A2744A55ED7449A98BCE80703DECC9E4</string></value></member>'+#13+
+              *)
+              '        </struct>'+#13+
+              '     </data>'+#13+
+              '   </array>'+#13+
+              ' </value>'+#13+
+              '</param>'+#13+
+              #13+
+              '</params>'+#13+
+              '</methodCall>';
+
+
+implementation
+
+end.

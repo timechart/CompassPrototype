@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/07/08 15:34:55.519.pas,D:\Users\Timechart\Documents\RAD Studio\Projects\Unit5.pas=C:\_TimeChart\Unit5.pas</Transaction>
+    <Transaction>2016/07/08 15:34:55.519.dfm,D:\Users\Timechart\Documents\RAD Studio\Projects\Unit5.dfm=C:\_TimeChart\Unit5.dfm</Transaction>
+    <Transaction>2016/07/08 15:35:00.315.dproj,D:\Users\Timechart\Documents\RAD Studio\Projects\Project5.dproj=C:\_TimeChart\Project5.dproj</Transaction>
+    <Transaction>2016/07/14 13:23:55.181.dproj,C:\_TimeChart\Project5.dproj=D:\amig\Source\CompassPrototype\CompassPrototype.dproj</Transaction>
+    <Transaction>2016/07/14 13:24:22.538.pas,C:\_TimeChart\Unit5.pas=D:\amig\Source\CompassPrototype\CompassPrototype1.pas</Transaction>
+    <Transaction>2016/07/14 13:24:22.538.dfm,C:\_TimeChart\Unit5.dfm=D:\amig\Source\CompassPrototype\CompassPrototype1.dfm</Transaction>
+    <Transaction>2016/07/23 07:39:09.286.pas,D:\amig\Source\CompassPrototype\Unit1.pas=D:\amig\Source\CompassPrototype\CompassPrototypeSamples.pas</Transaction>
+    <Transaction>2016/07/23 17:24:01.891.pas,D:\amig\Source\CompassPrototype\Unit1.pas=D:\amig\Source\CompassPrototype\CompassPrototypePushSamples.pas</Transaction>
+    <Transaction>2016/07/23 17:24:27.519.pas,D:\amig\Source\CompassPrototype\CompassPrototypePushSamples.pas=D:\amig\Source\CompassPrototype\CompassPushSamples.pas</Transaction>
+    <Transaction>2016/07/23 17:24:36.037.pas,D:\amig\Source\CompassPrototype\CompassPrototypeSamples.pas=D:\amig\Source\CompassPrototype\CompassSamples.pas</Transaction>
+    <Transaction>2016/07/23 18:21:42.818.pas,D:\amig\Source\CompassPrototype\CompassSamples.pas=D:\amig\Source\CompassPrototype\CompassPullSamples.pas</Transaction>
+  </Transactions>
+</BorlandProject>
