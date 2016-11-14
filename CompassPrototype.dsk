@@ -12,10 +12,11 @@ File_9=TSourceModule,'D:\amig\Source\TCNET\tcommon5.pas',0,1,1905,76,1915,0,0,,
 
 [Modules]
 Module0=D:\amig\Source\CompassPrototype\CompassPullSamples.pas
-Module1=D:\amig\Source\CompassPrototype\CompassPrototype1.pas
-Module2=D:\amig\Source\CompassPrototype\CompassPushSamples.pas
-Module3=D:\amig\Source\CompassPrototype\SampleRequest.txt
-Count=4
+Module1=D:\amig\Source\CompassPrototype\CompassPushSamples.pas
+Module2=D:\amig\Source\CompassPrototype\xml_from_compass.xml
+Module3=D:\amig\Source\CompassPrototype\CompassPrototype1.pas
+Module4=D:\amig\Source\CompassPrototype\SampleRequest.txt
+Count=5
 EditWindowCount=1
 
 [D:\amig\Source\CompassPrototype\CompassPullSamples.pas]
@@ -23,26 +24,30 @@ ModuleType=TSourceModule
 FormState=0
 FormOnTop=0
 
-[D:\amig\Source\CompassPrototype\CompassPrototype1.pas]
-ModuleType=TSourceModule
-FormState=1
-FormOnTop=0
-
 [D:\amig\Source\CompassPrototype\CompassPushSamples.pas]
 ModuleType=TSourceModule
 FormState=0
+FormOnTop=0
+
+[D:\amig\Source\CompassPrototype\xml_from_compass.xml]
+ModuleType=TSourceModule
+
+[D:\amig\Source\CompassPrototype\CompassPrototype1.pas]
+ModuleType=TSourceModule
+FormState=1
 FormOnTop=0
 
 [D:\amig\Source\CompassPrototype\SampleRequest.txt]
 ModuleType=TSourceModule
 
 [EditWindow0]
-ViewCount=4
+ViewCount=5
 CurrentEditView=D:\amig\Source\CompassPrototype\CompassPullSamples.pas
 View0=0
 View1=1
 View2=2
 View3=3
+View4=4
 PercentageSizes=1
 Create=1
 Visible=1
@@ -76,9 +81,9 @@ BottomMiddelPanelData=0000080001000100000009000000446F636B5369746530361900000000
 [View0]
 CustomEditViewType=TEditView
 Module=D:\amig\Source\CompassPrototype\CompassPrototype1.pas
-CursorX=1
-CursorY=75
-TopLine=51
+CursorX=24
+CursorY=10
+TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
@@ -86,27 +91,38 @@ EditViewName=D:\amig\Source\CompassPrototype\CompassPrototype1.pas
 
 [View1]
 CustomEditViewType=TEditView
+Module=D:\amig\Source\CompassPrototype\xml_from_compass.xml
+CursorX=62
+CursorY=524
+TopLine=368
+LeftCol=1
+Elisions=
+Bookmarks=
+EditViewName=D:\amig\Source\CompassPrototype\xml_from_compass.xml
+
+[View2]
+CustomEditViewType=TEditView
 Module=D:\amig\Source\CompassPrototype\CompassPullSamples.pas
-CursorX=35
-CursorY=82
-TopLine=79
+CursorX=40
+CursorY=91
+TopLine=73
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=D:\amig\Source\CompassPrototype\CompassPullSamples.pas
 
-[View2]
+[View3]
 CustomEditViewType=TEditView
 Module=D:\amig\Source\CompassPrototype\CompassPushSamples.pas
-CursorX=20
-CursorY=64
+CursorX=32
+CursorY=67
 TopLine=58
 LeftCol=1
 Elisions=
 Bookmarks=
 EditViewName=D:\amig\Source\CompassPrototype\CompassPushSamples.pas
 
-[View3]
+[View4]
 CustomEditViewType=TEditView
 Module=D:\amig\Source\CompassPrototype\SampleRequest.txt
 CursorX=19
@@ -428,12 +444,12 @@ TBDockHeight=6760
 LRDockWidth=1354
 Dockable=1
 StayOnTop=0
-SplitPos=161
+SplitPos=126
 
 [PropInspDesignerSelection]
 ArrangeBy=Name
-SelectedItem=Caption,
-ExpandedItems=Anchors=0,Constraints=0,Font=0
+SelectedItem=Action,OnCreate
+ExpandedItems=Anchors=0,BorderIcons=0
 
 [ModelViewTool]
 PercentageSizes=1

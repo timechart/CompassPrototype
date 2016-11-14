@@ -9,14 +9,16 @@ uses
 
 type
   TForm5 = class(TForm)
+  // test change for tower git
     Memo1: TMemo;
     Panel1: TPanel;
     Button1: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    XML_file: string;
   end;
 
 var
@@ -80,6 +82,15 @@ _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rf
 //showMessage(_xml_toGo);
 
 xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
+with TStringList.Create do
+try
+  Add(xmlResponse);
+  SaveToFile(XML_file);
+finally
+  free;
+end;
+
+
 if (http.LastMethodSuccess <> 1) then
   begin
     Memo1.Lines.Add(http.LastErrorText);
@@ -101,6 +112,11 @@ end
 //             mtWarning,[mbOk],0);
 
 
+end;
+
+procedure TForm5.FormCreate(Sender: TObject);
+begin
+   XML_file := ExtractFIlePath(APplication.exename)+'xml_from_compass.xml';
 end;
 
 end.
