@@ -215,58 +215,7 @@ xml_publishClassMemberships =
               '</methodCall>';
 
 //liss.publishTeachers(auth : AuthorisationObject, asAtDate : timestamp, data : array of teacher objects)
-xml_publishTeachers =
-              '<?xml version="1.0"?>'+#13+
-              '<methodCall>'+ #13+
-              '  <methodName>liss.publishTeachers</methodName>'+#13+
-              '  <params>'+#13+
-              #13+
-              '<param>'+#13+
-              ' <value>'+#13+
-              '   <struct>'+#13+
-              '     <member><name>School</name><value>TimeChart</value></member>'+#13+
-              '     <member><name>UserName</name><value>TTUSER1</value></member>'+#13+
-              '     <member><name>Password</name><value>26c5d2f9-aac0-43d8-959b-7a4c14d8b223</value></member>'+#13+
-              '     <member><name>LissVersion</name><value><i4>10002</i4></value></member>'+#13+
-              '     <member><name>UserAgent</name><value>Timetable Software v1</value></member>'+#13+
-              '     <member><name>cyclicalPath</name><value>C:\MyFile.timetableFile</value></member>'+#13+
-              '   </struct>'+#13+
-              ' </value>'+#13+
-              '</param>'+#13+
-              #13+
-              '<param>'+#13+
-              ' <value>'+#13+
-              '   [TIMESTAMP]'+#13+     //<dateTime.iso8601>20160715T23:59:00</dateTime.iso8601>'+#13+
-              ' </value> '+#13+
-              '</param>'+#13+
-              #13+
-              '<param>'+#13+
-              ' <value>'+#13+
-              '   <array>'+#13+
-              '     <data>'+#13+
-              '        <struct>'+#13+
-              '           <member><name>TeacherId</name><value><string>TeacherId1</string></value></member>'+#13+
-              '           <member><name>TeacherCode</name><value><string>TeacherCode1</string></value></member>'+#13+
-              '           <member><name>Title</name><value><string>TeacherTitle</string></value></member>'+#13+
-              '           <member><name>FirstName</name><value><string>TeacherFirstName</string></value></member>'+#13+
-              '           <member><name>Surname</name><value><string>TeacherSurname</string></value></member>'+#13+
-              '           <member><name>PreferredName</name><value><string>TeacherPreferredName</string></value></member>'+#13+
-              '           <member><name>DisplayName</name><value><string>DisplayName</string></value></member>'+#13+
-              '           <member><name>Faculty</name><value><string>Faculty1</string></value></member>'+#13+
-              '           <member><name>StaffType</name><value><string>FullTime</string></value></member>'+#13+
-              '           <member><name>Gender</name><value><string>M</string></value></member>'+#13+
-              '           <member><name>DaysAvailable</name><value><string>Wed,Thu,Fri</string></value></member>'+#13+
-              '           <member><name>Email</name><value><string>TeacherEmail</string></value></member>'+#13+
-              '           <member><name>Phone</name><value><string>TeacherPhone</string></value></member>'+#13+
-              '           <member><name>Guid</name><value><string>A1A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0A0</string></value></member>'+#13+
-              '        </struct>'+#13+
-              '     </data>'+#13+
-              '   </array>'+#13+
-              ' </value>'+#13+
-              '</param>'+#13+
-              #13+
-              '</params>'+#13+
-              '</methodCall>';
+
 
 //liss.publishTimetable(auth : AuthorisationObject,
 //                      timetable : array, academicYear : integer, timetableId : integer,

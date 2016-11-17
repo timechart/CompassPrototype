@@ -4,7 +4,10 @@ uses
   Forms,
   CompassPrototype1 in 'CompassPrototype1.pas' {Form5},
   CompassPullSamples in 'CompassPullSamples.pas',
-  CompassPushSamples in 'CompassPushSamples.pas';
+  CompassPushSamples in 'CompassPushSamples.pas',
+  liss.Students in '..\LISS\liss.Students.pas',
+  liss.hello in '..\LISS\liss.hello.pas',
+  liss.Teachers in '..\LISS\liss.Teachers.pas';
 
 {$R *.res}
 
