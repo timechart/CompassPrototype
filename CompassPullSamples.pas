@@ -35,6 +35,8 @@ xml_getTimetableStructures =
 
 //liss.getTeachers(auth : AuthorisationObject, asAtDate : timestamp)
 
+
+
 xml_GetRooms =
               '<?xml version="1.0"?>'+#13+
               '<methodCall>'+#13+

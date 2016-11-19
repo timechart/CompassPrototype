@@ -7,7 +7,9 @@ uses
   CompassPushSamples in 'CompassPushSamples.pas',
   liss.Students in '..\LISS\liss.Students.pas',
   liss.hello in '..\LISS\liss.hello.pas',
-  liss.Teachers in '..\LISS\liss.Teachers.pas';
+  liss.Teachers in '..\LISS\liss.Teachers.pas',
+  liss.base in '..\LISS\liss.base.pas',
+  liss.Classes in '..\LISS\liss.Classes.pas';
 
 {$R *.res}
 

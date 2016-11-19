@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Chilkat_v9_5_0_TLB, StdCtrls, Registry, ExtCtrls, clipBrd, CompassPullSamples,
-  compassPushSamples, OXmlPDOM, OXmlUtils, liss.Students, liss.hello, liss.Teachers;
+  compassPushSamples, OXmlPDOM, OXmlUtils, liss.Students, liss.hello, liss.Teachers, liss.Classes;
 
 type
   TForm5 = class(TForm)
@@ -45,9 +45,7 @@ var
   _xml_toGo: WideString;
   xmlResponse: WideString;
   ChilKatInstalled: boolean;
-  _OkSTring: string;
 begin
-    ChilKatInstalled:= False;
     with TRegistry.Create do
     try
      RootKey:= HKEY_CLASSES_ROOT;
@@ -70,22 +68,24 @@ begin
       Memo1.Lines.Add(http.LastErrorText);
       Exit;
     end;
-    _xml_toGo := xml_hello;
+    _xml_toGo := LissHello.BuildRequestXML;
     _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rfReplaceAll, rfIgnoreCase]);
     xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
     if not LissHello.loadFromXML(xmlResponse) then
       exit;
-    _xml_toGo := xml_getStudents;
+    _xml_toGo := LissStudentList.BuildRequestXML;
     _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rfReplaceAll, rfIgnoreCase]);
     xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
     if not LissStudentList.loadFromXML(xmlResponse) then
       exit;
-    _xml_toGo := xml_getTeachers; //xml_getTeachers;     //xml_publishTeachers
+    _xml_toGo := LissTeacherList.BuildRequestXML; //xml_getTeachers;     //xml_publishTeachers
     _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rfReplaceAll, rfIgnoreCase]);
-    clipboard.AsText:=   _xml_toGo;
-    showMessage(_xml_toGo);
     xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
-    clipboard.AsText:=   xmlResponse;
+    if not  LissTeacherList.loadFromXML(xmlResponse) then
+      Exit;
+    _xml_toGo := LissClassList.BuildRequestXML;
+    _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rfReplaceAll, rfIgnoreCase]);
+    xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
     memo1.Text := xmlResponse;
     if (http.LastMethodSuccess <> 1) then
     begin

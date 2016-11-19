@@ -54,8 +54,6 @@ object Form5: TForm5
       '')
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = -80
-    ExplicitTop = -23
   end
   object Panel1: TPanel
     Left = 0
