@@ -83,8 +83,9 @@ begin
     xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
     if not  LissTeacherList.loadFromXML(xmlResponse) then
       Exit;
-    _xml_toGo := LissClassList.BuildRequestXML;
+    _xml_toGo := LissClassList.BuildPublishXML;
     _xml_toGo := StringReplace(_xml_toGo, '[TIMESTAMP]', make_iso8601_date(Now), [rfReplaceAll, rfIgnoreCase]);
+    clipBoard.asText:=  _xml_toGo;
     xmlResponse := http.XmlRpc('https://liss-test.compass.edu.au/Services/Liss/Test/?academicYear=2016',_xml_toGo);
     memo1.Text := xmlResponse;
     if (http.LastMethodSuccess <> 1) then
@@ -92,7 +93,20 @@ begin
         Memo1.Lines.Add(http.LastErrorText);
         Exit;
     end;
+(*
+<?xml version="1.0"?>
+<methodResponse>
+  <params>
+    <param>
+      <value>
+        <string />
+      </value>
+    </param>
+  </params>
+</methodResponse>
+*)
 end;
+
 
 procedure TForm5.FormCreate(Sender: TObject);
 begin

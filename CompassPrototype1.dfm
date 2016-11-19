@@ -26,6 +26,11 @@ object Form5: TForm5
     Font.Name = 'Calibri'
     Font.Style = []
     Lines.Strings = (
+      'URL: <https://liss-test.compass.edu.au/>'
+      'UN: TTUSER1'
+      'PW: 335522'
+      '----------------------------------------------------'
+      ''
       'Hi Jim'
       ''
       'Order to call the methods in:'
